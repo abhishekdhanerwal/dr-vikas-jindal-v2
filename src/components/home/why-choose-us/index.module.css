@@ -142,6 +142,11 @@
     .whyImageWrapper {
         width: 80%;
     }
+
+    .whyHeading {
+        font-size: 2rem;
+        text-align: center;
+    }
 }
 
 @keyframes fade-scale {

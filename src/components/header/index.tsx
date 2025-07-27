@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 import { useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,11 +17,15 @@ import { NAVIGATION } from '@/content/navigation';
 import NavigationDrawer from '../navigation-drawer';
 
 export const Header = () => {
-    const { openSans, roboto } = useFonts();
+    const { 
+        roboto,
+        zillaSlab
+     } = useFonts();
     const matchesMobileScreen = useMediaQuery('(max-width: 480px)');
     const matchesSmallScreen = useMediaQuery('(max-width: 820px)');
 
     const router = useRouter();
+    const pathname = usePathname();
 
     const [openSideMenu, setOpenSideMenu] = useState(false);
 
@@ -37,15 +41,17 @@ export const Header = () => {
         setOpenSideMenu(false);
     };
 
+    console.log(pathname)
+
     return (
         <header className={css.header}>
             <div className={css.headerContent}>
-                <span className={`${openSans.className} ${css.title}`}>Dr. Vikas Jindal</span>
+                <span className={`${zillaSlab.className} ${css.title}`} onClick={() => goToRoute("/")}>Dr. Vikas Jindal</span>
                 {matchesMobileScreen ? <MenuIcon onClick={showDrawer} /> :
                     <>
                         <nav>
                             <ul className={`${css.listContainer} ${roboto.className}`}>
-                                {NAVIGATION.map(item => <li key={item.route} onClick={() => goToRoute(item.route)}>{item.label}</li>)}
+                                {NAVIGATION.map(item => <li key={item.route} className={item.route === pathname ? css.activeRoute : ""} onClick={() => goToRoute(item.route)}>{item.label}</li>)}
                                 <li className={css.navAppointmentBtn}>{matchesSmallScreen ? <EditCalendarIcon /> : 'Book Appointment'}</li>
                             </ul>
                         </nav>

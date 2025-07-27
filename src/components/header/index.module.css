@@ -19,9 +19,10 @@
   }
   
   .title {
-    font-size: 20px;
+    font-size: 32px;
     display: flex;
     align-items: center;
+    font-weight: 700;
   }
   
   .listContainer {
@@ -49,6 +50,12 @@
   .icons {
     display: flex;
     align-items: center;
+  }
+  
+  .activeRoute {
+    text-decoration: underline;
+    font-weight: 700;
+    text-underline-offset: 8px;
   }
   
   /* Responsive adjustments for tabs */
@@ -90,6 +97,10 @@
   
     .navAppointmentBtn {
       padding: 2px 6px;
+    }
+
+    .title {
+      font-size: 24px;
     }
   }
   

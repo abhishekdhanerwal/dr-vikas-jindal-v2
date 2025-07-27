@@ -111,11 +111,11 @@
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
     .testimonialHeader h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
       }
 
       .testimonialHeader p {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
 
       .testimonialButton a button {

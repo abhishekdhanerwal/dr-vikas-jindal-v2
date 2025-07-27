@@ -1,4 +1,6 @@
-import { Button, Chip } from '@mui/material';
+"use client";
+
+import { Button, Chip, useMediaQuery } from '@mui/material';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import CallIcon from '@mui/icons-material/Call';
 import LocationPinIcon from '@mui/icons-material/LocationPin';
@@ -14,10 +16,15 @@ export const Banner = () => {
         roboto,
         zillaSlab } = useFonts();
 
+        const matchesMobileScreen = useMediaQuery('(max-width: 480px)');
+
     return (
         <section className={css.banner}>
         <div className={css.infoSection}>
           <Chip className={css.chip} avatar={<WorkspacePremiumIcon className={css.chipIcon} />} label="Leading Gastroenterologist in Delhi" />
+          {matchesMobileScreen ?  <div className={css.imgContainerMobile}>
+            <Image alt='' objectFit="fill" fill src="/images/v1.jpg" /> 
+          </div> : null}
           <h1 className={`${montserrat.className} ${css.heading1}`} >Expert Care for Your</h1>
           <h1 className={`${montserrat.className}  ${css.heading2}`} >Digestive Health</h1>
           <p className={`${zillaSlab.className} ${css.description}`}>Dr. Vikas Jindal brings over 15 years of specialized experience in advanced gastroenterology, transplant hepatology, and therapeutic endoscopy from AIIMS New Delhi.</p>
@@ -37,11 +44,11 @@ export const Banner = () => {
             </div>)}
           </div>
         </div>
-        <div className={css.imgSection}>
-          <div className={css.imgContainer} style={{width: '40%'}}>
+        {!matchesMobileScreen ? <div className={css.imgSection}>
+          <div className={css.imgContainer}>
             <Image alt='' objectFit="fill" fill src="/images/v1.jpg" /> 
           </div>
-        </div>
+        </div> : null}
       </section>
     )
 }

@@ -15,7 +15,7 @@ const exo2 = Exo_2({ weight: ["300", "400", "500"], subsets: ["latin"] });
 const playpenSans = Playpen_Sans({ subsets: ["latin"] });
 const unlock = Unlock({ weight: "400", subsets: ["latin"] });
 const sofadiOne = Sofadi_One({ weight: "400", subsets: ["latin"] });
-const zillaSlab = Zilla_Slab({ weight: "600", subsets: ["latin"] });
+const zillaSlab = Zilla_Slab({ weight: ["600", "700"], subsets: ["latin"] });
 
 export const useFonts = () => {
     return {
