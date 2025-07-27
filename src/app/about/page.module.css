@@ -227,7 +227,7 @@
     height: 2rem;
   }
   
-  .statNumber {
+  .ceStatNumber {
     font-size: 2.25rem;
     font-weight: bold;
     background: linear-gradient(to right, #7c3aed, #3b82f6);
@@ -606,7 +606,7 @@
     background: linear-gradient(to right, #8b5cf6, #ec4899);
   }
   
-  .year {
+  .awardYear {
     font-size: 1.5rem;
     font-weight: 700;
     background: linear-gradient(to right, #9333ea, #06b6d4);
@@ -631,3 +631,36 @@
     color: #6b7280;
     font-size: 0.875rem;
   }
+
+    /* Responsive adjustments for mobile devices */
+    @media (max-width: 480px) {
+      .heroSection {
+        padding-top: 1rem;
+        padding-bottom: 5rem;;
+      }
+
+      .image {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .statBox {
+        bottom: -3.5rem;
+        left: 0.5rem;
+      }
+
+      .title,
+      .clinicalExcellenceTitle {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.5rem;
+      }
+
+      .ceStatNumber {
+        font-size: 1.8rem;
+      }
+
+    }
+

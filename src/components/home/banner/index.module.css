@@ -1,7 +1,7 @@
 .banner {
     background: var(--soft-white);
     padding: 40px 80px 0px 80px;
-    height: calc(100vh - 119px);
+    height: calc(100dvh - 119px);
     display: flex;
 }
 
@@ -97,7 +97,7 @@
 
 .imgSection {
     display: flex;
-    justify-content: flex-end;    
+    justify-content: flex-end;
     align-items: center;
     width: 100%;
 }
@@ -130,7 +130,7 @@
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
     .banner {
-        height: calc(100vh - 93px);
+        height: calc(100dvh - 93px);
         flex-direction: column;
     }
 
@@ -141,11 +141,11 @@
     .heading1 {
         font-size: 28px;
     }
-    
+
     .heading2 {
         font-size: 28px;
     }
-    
+
     .btnGroup {
         gap: 0px;
         justify-content: space-between;
@@ -163,11 +163,11 @@
     .bannerCard {
         width: 160px;
     }
-    
+
     .bannerCardTitle {
         font-size: 18px;
     }
-    
+
     .bannerCardDescription {
         font-size: 14px;
     }
@@ -183,5 +183,67 @@
 
     .imgContainerMobile img {
         border-radius: 15px;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .imgContainerMobile {
+        height: 32dvh;
+    }
+
+    .extraWidgets {
+        margin-top: 12%;
+        gap: 10px;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 390px) {
+    .imgContainerMobile {
+        height: 28dvh;
+    }
+
+    .extraWidgets {
+        margin-top: 12%;
+        gap: 10px;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 375px) {
+    .imgContainerMobile {
+        margin-top: 16px;
+    }
+
+    .extraWidgets {
+        margin-top: 16px;
+        gap: 6px;
+    }
+
+    .heading1,
+    .description,
+    .btnGroup {
+        margin-top: 12px;
+    }
+
+    .bannerCardContent {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        gap: 6px;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 360px) {
+    .extraWidgets {
+        margin-top: 32px;
+        gap: 4px;
+    }
+
+    .bannerCardContent {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        gap: 8px;
     }
 }

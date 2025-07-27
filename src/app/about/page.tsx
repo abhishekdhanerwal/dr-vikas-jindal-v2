@@ -194,7 +194,7 @@ export default function About() {
                                     <div className={`${css.iconBox} ${css[`gradient${stat.gradient}`]}`}>
                                         {stat.icon}
                                     </div>
-                                    <div className={`${robotoBold.className} ${css.statNumber}`}>{stat.number}</div>
+                                    <div className={`${robotoBold.className} ${css.ceStatNumber}`}>{stat.number}</div>
                                     <h3 className={`${openSans.className} ${css.statLabel}`}>{stat.label}</h3>
                                     <p className={`${roboto.className} ${css.statDescription}`}>{stat.description}</p>
                                 </div>
@@ -281,7 +281,7 @@ export default function About() {
                                 <CardContent className={css.cardContent}>
                                     <div className={css.backgroundCircle}></div>
                                     <div className={`${css.awardIconBox} ${css[award.gradient]}`}>{award.icon}</div>
-                                    <div className={`${robotoBold.className} ${css.year}`}>{award.year}</div>
+                                    <div className={`${robotoBold.className} ${css.awardYear}`}>{award.year}</div>
                                     <h3 className={`${robotoBold.className} ${css.awardTitle}`}>{award.award}</h3>
                                     <p className={`${roboto.className} ${css.organization}`}>{award.organization}</p>
                                 </CardContent>
