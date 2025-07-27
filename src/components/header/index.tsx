@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from 'react';
 
 import { useRouter, usePathname } from 'next/navigation';
@@ -41,12 +42,13 @@ export const Header = () => {
         setOpenSideMenu(false);
     };
 
-    console.log(pathname)
-
     return (
         <header className={css.header}>
             <div className={css.headerContent}>
-                <span className={`${zillaSlab.className} ${css.title}`} onClick={() => goToRoute("/")}>Dr. Vikas Jindal</span>
+                <div className={css.logoTitle}>
+                    <Image className={css.logo} alt='logo' width={matchesMobileScreen ? 48 : 64} height={matchesMobileScreen ? 40 : 54} src={'/logo.png'} />
+                    <span className={`${zillaSlab.className} ${css.title}`} onClick={() => goToRoute("/")}>Dr. Vikas Jindal</span>
+                </div>
                 {matchesMobileScreen ? <MenuIcon onClick={showDrawer} /> :
                     <>
                         <nav>

@@ -4,11 +4,13 @@
 
 .activeNavItem {
     color: var(--primary-color-orange); 
-    border-radius: 15px;
+    border-radius: 15px !important;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid var(--vibrant-red) !important;
     background: white;
     margin-right: 10px;
     margin-left: 10px;
+    color: var(--vibrant-red) !important;
 }
 
 .activeNavItemIcon {
@@ -32,4 +34,28 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.bookingBtn {
+    margin-top: 36px !important;
+    background-color: var(--vibrant-red) !important;
+}
+
+.logoTitle {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 15px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title > span:nth-child(2) {
+    font-size: 12px;
 }
