@@ -1,0 +1,633 @@
+.heroSection {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom right, #eff6ff, #ffffff);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1f2937; /* text-gray-900 */
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    display: block;
+    font-size: 1.875rem;
+    margin-top: 0.5rem;
+    color: #2563eb; /* text-blue-600 */
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .buttonGroup {
+      flex-direction: row;
+    }
+  }
+  
+  .primaryButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb; /* bg-blue-600 */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .primaryButton:hover {
+    background-color: #1d4ed8; /* hover:bg-blue-700 */
+  }
+  
+  .outlineButton {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .outlineButton:hover {
+    background-color: #eff6ff; /* hover:bg-blue-50 */
+  }
+  
+  .imageWrapper {
+    position: relative;
+  }
+  
+  .image {
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: fade-scale 1s ease forwards;
+    order: -1;
+    width: 80%;
+    height: 480px;
+  }
+  
+  .statBox {
+    position: absolute;
+    bottom: -1.5rem;
+    left: -1.5rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2563eb;
+  }
+  
+  .statLabel {
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+
+
+/* <---- > */
+
+.clinicalExcellenceSection {
+    padding: 5rem 0;
+    background: var(--soft-white);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .clinicalExcellenceHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: slideUp 1s ease;
+  }
+  
+  .clinicalExcellenceTitle {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  
+  .textGradient {
+    background: linear-gradient(to right, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .clinicalExcellenceSubtitle {
+    font-size: 1.25rem;
+    color: #4b5563;
+  }
+  
+  .cardGrid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .cardGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .cardGrid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .card {
+    text-align: center;
+    background: linear-gradient(to bottom right, #ffffff, #f9fafb);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 0 transparent;
+  }
+  
+  .card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cardContent {
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .bgCircle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0.1;
+    border-radius: 9999px;
+    transform: translate(4rem, -4rem);
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover .bgCircle {
+    transform: translate(4rem, -4rem) scale(1.5);
+  }
+  
+  .iconBox {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .iconBox {
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .statNumber {
+    font-size: 2.25rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #7c3aed, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statLabel {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.75rem;
+  }
+  
+  .statDescription {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  
+  /* Gradient Colors */
+  .gradientpurple {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+  }
+  
+  .gradientblue {
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+  }
+  
+  .gradientgreen {
+    background: linear-gradient(to right, #10b981, #34d399);
+  }
+  
+  .gradientred {
+    background: linear-gradient(to right, #ef4444, #ec4899);
+  }
+  
+  /* Animations */
+  @keyframes slideUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  /* <-------- Sections -----> */
+  .qualificationSection {
+    padding: 5rem 0;
+    background: var(--soft-white);
+  }
+  
+  .qualificationTextGradient {
+    background: linear-gradient(to right, #8b5cf6, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .qualificationGrid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .qualificationGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .qualificationGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .qualificationCard {
+    background: linear-gradient(to bottom right, #ffffff, #f3f4f6); /* white to gray-50 */
+    border-radius: 1rem;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .qualificationCard:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qualificationBgCircle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    height: 6rem;
+    opacity: 0.1;
+    border-radius: 50%;
+    transform: translate(3rem, -3rem);
+    transition: transform 0.5s ease;
+  }
+  
+  .qualificationCard:hover .qualificationBgCircle {
+    transform: translate(3rem, -3rem) scale(1.5);
+  }
+  
+  .qualificationIconBox {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    color: white;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .qualificationCard:hover .qualificationIconBox {
+    transform: scale(1.1);
+  }
+  
+  .year {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111827;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .qualificationCard:hover .cardTitle {
+    color: #7c3aed;
+  }
+  
+  .institution {
+    color: #7c3aed;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .qualificationDescription {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+  
+  /* ICON COLOR HELPERS */
+  .iconColorWhite {
+    color: #fff;
+  }
+
+  .iconColorPurple {
+    color: #8b5cf6;
+  }
+  .iconColorBlue {
+    color: #3b82f6;
+  }
+  .iconColorCyan {
+    color: #06b6d4;
+  }
+  .iconColorEmerald {
+    color: #10b981;
+  }
+  .iconColorGreen {
+    color: #22c55e;
+  }
+  .iconColorYellow {
+    color: #eab308;
+  }
+  
+  /* GRADIENT BACKGROUNDS */
+  .gradientPurple {
+    background: linear-gradient(to right, #8b5cf6, #3b82f6);
+  }
+  .gradientBlue {
+    background: linear-gradient(to right, #3b82f6, #06b6d4);
+  }
+  .gradientCyan {
+    background: linear-gradient(to right, #06b6d4, #10b981);
+  }
+  .gradientEmerald {
+    background: linear-gradient(to right, #10b981, #22c55e);
+  }
+  .gradientGreen {
+    background: linear-gradient(to right, #22c55e, #eab308);
+  }
+  .gradientYellow {
+    background: linear-gradient(to right, #eab308, #f97316);
+  }
+
+  /* philosophy */
+  .philosophySection {
+    position: relative;
+    overflow: hidden;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to right, #7c3aed, #2563eb, #06b6d4);
+    color: white;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  .backgroundOverlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("/placeholder.svg?height=600&width=1200");
+    opacity: 0.1;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .contentWrapper {
+    position: relative;
+    /* z-index: 10; */
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .innerContent {
+    max-width: 64rem; /* 1024px */
+    margin: 0 auto;
+    text-align: center;
+    animation: slideUp 0.8s ease forwards;
+  }
+  
+  .heartIcon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 2rem;
+    color: #fbcfe8;
+    animation: pulse 2s infinite;
+  }
+  
+  .heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.75;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .author {
+    font-size: 1.25rem;
+  }
+  
+  .authorName {
+    font-weight: 600;
+    color:#fff;
+  }
+  
+  .authorDetails {
+    color: #bfdbfe;
+  }
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.75;
+    }
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Awardssss */
+
+  .awardSection {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: var(--soft-white);
+  }
+  
+  .highlight {
+    background: linear-gradient(to right, #9333ea, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .awardCard {
+    text-align: center;
+    background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border: none;
+  }
+  
+  .awardCard:hover {
+    /* transform: translateY(-1rem); */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backgroundCircle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom right, #d1d5db, #f9fafb);
+    opacity: 0.1;
+    transform: translate(3rem, -3rem);
+    transition: transform 0.5s ease;
+  }
+  
+  /* .awardCard:hover .backgroundCircle {
+    transform: scale(1.5) translate(3rem, -3rem);
+  } */
+  
+  .awardIconBox {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+  }
+  
+  .awardCard:hover .iconBox {
+    /* transform: scale(1.1); */
+  }
+  
+  /* Gradients */
+  .yellowToOrange {
+    background: linear-gradient(to right, #f59e0b, #f97316);
+  }
+  
+  .blueToPurple {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  }
+  
+  .greenToBlue {
+    background: linear-gradient(to right, #10b981, #3b82f6);
+  }
+  
+  .purpleToPink {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+  }
+  
+  .year {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #9333ea, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .awardTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+  }
+  
+  .awardCard:hover .awardTitle {
+    color: #7c3aed;
+  }
+  
+  .organization {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }

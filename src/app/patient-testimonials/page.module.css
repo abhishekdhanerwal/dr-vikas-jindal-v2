@@ -1,0 +1,398 @@
+.wrapper {
+    min-height: 100vh;
+}
+
+.heroSection {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom right, #eff6ff, #ffffff);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.heroContent {
+    text-align: center;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.75rem;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statIcon {
+    display: flex;
+    justify-content: center;
+    color: #2563eb;
+    margin-bottom: 0.75rem;
+}
+
+.statNumber {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.statLabel {
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+
+/* ------------------------- */
+
+.section {
+    padding: 5rem 0;
+    background: var(--soft-white);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.headerBadge {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.googleInitial {
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.reviewTitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.subtext {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.summaryCard {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid #fed7aa;
+    margin-bottom: 4rem;
+}
+
+.ratingBlock,
+.summaryItem {
+    text-align: center;
+}
+
+.ratingValue {
+    font-size: 2.25rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #fb923c, #facc15);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.25rem;
+}
+
+.stars,
+.starGroup {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.starIcon,
+.starIconSmall {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #facc15;
+}
+
+.summaryNumber {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.summaryLabel {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.divider {
+    height: 3rem;
+    width: 1px;
+    background-color: #d1d5db;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-bottom: 3rem;
+}
+
+.reviewCard {
+    background: white;
+    border: 1px solid #ffedd5;
+    transition: all 0.3s ease;
+}
+
+.reviewCard:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.reviewerInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 9999px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewerNameRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.reviewerName {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.verified {
+    font-size: 0.75rem;
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.reviewerDetails {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.reviewDate {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.googleLogoSmall {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.ratingRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.reviewDateSmall {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.reviewText {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.625;
+    margin-bottom: 1rem;
+}
+
+.reviewFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.viewBtn {
+    color: #ea580c;
+    background: transparent;
+}
+
+.viewBtn:hover {
+    color: #c2410c;
+    background-color: #fff7ed;
+}
+
+.ctaCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid #fed7aa;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.ctaHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ctaLogo {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ctaInfo {
+    text-align: left;
+}
+
+.ctaTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.ctaStars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.reviewCount {
+    margin-left: 0.5rem;
+}
+
+.ctaText {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .ctaButtons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.ctaPrimary {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+}
+
+.ctaSecondary {
+    border: 1px solid #f97316;
+    color: #f97316;
+    background: transparent;
+    padding: 0.75rem 1.5rem;
+}
+
+.paginationContainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+}
+

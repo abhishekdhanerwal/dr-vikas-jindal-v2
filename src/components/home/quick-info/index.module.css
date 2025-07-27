@@ -1,0 +1,21 @@
+.contact {
+    background: var(--vibrant-red);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact span {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .contact {
+        height: 45px;
+    }
+}

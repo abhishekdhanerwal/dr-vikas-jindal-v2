@@ -1,0 +1,173 @@
+.banner {
+    background: var(--soft-white);
+    padding: 40px 80px 0px 80px;
+    height: calc(100vh - 119px);
+    display: flex;
+}
+
+.infoSection {
+    width: 60%;
+}
+
+.chip {
+    background: rgba(247, 68, 78, 0.2) !important;
+    color: var(--vibrant-red) !important;
+    padding: 16px !important;
+}
+
+.chipIcon {
+    color: var(--vibrant-red) !important;
+}
+
+.heading1 {
+    margin-top: 30px;
+    font-size: 40px;
+    color: var(--deep-navy);
+}
+
+.heading2 {
+    margin-top: 8px;
+    font-size: 40px;
+    color: var(--vibrant-red);
+}
+
+.description {
+    margin-top: 32px;
+    line-height: 1.4;
+    color: var(--gunpowder-gray);
+}
+
+.btnGroup {
+    margin-top: 24px;
+    display: flex;
+    gap: 24px;
+}
+
+.btnGroup button {
+    width: 208px;
+}
+
+.extraWidgets {
+    margin-top: 60px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 42px;
+}
+
+.bannerCard {
+    width: 140px;
+    border-radius: 8px;
+}
+
+.bannerCardPurple {
+    background: rgba(131, 51, 233, 0.2);
+    color: rgba(131, 51, 233, 1);
+    border: 1px solid rgba(131, 51, 233, 0.2);
+}
+
+.bannerCardPink {
+    background: rgba(233, 51, 170, 0.2);
+    color: rgba(233, 51, 170, 1);
+    border: 1px solid rgba(233, 51, 170, 0.2);
+}
+
+.bannerCardOrange {
+    background: rgba(233, 123, 51, 0.2);
+    color: rgba(233, 123, 51, 1);
+    border: 1px solid rgba(233, 123, 51, 0.2);
+}
+
+.bannerCardContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 8px;
+}
+
+.bannerCardTitle {
+    font-size: 20px;
+}
+
+.bannerCardDescription {
+    font-size: 16px;
+}
+
+.imgSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.imgContainer {
+    position: relative;
+    width: 60%;
+    height: 400px;
+}
+
+.imgContainer img {
+    border-radius: 15px;
+}
+
+/* Responsive adjustments for tabs */
+@media (max-width: 820px) {
+    .banner {
+        padding: 20px 10px;
+    }
+
+    .infoSection {
+        width: 50%;
+    }
+
+    .imgContainer {
+        width: 100%;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .banner {
+        height: calc(100vh - 93px);
+    }
+
+    .infoSection {
+        width: 100%;
+    }
+
+    .heading1 {
+        font-size: 28px;
+    }
+    
+    .heading2 {
+        font-size: 28px;
+    }
+    
+    .btnGroup {
+        gap: 0px;
+        justify-content: space-between;
+    }
+
+    .btnGroup button {
+        font-size: 10px;
+        width: 200px;
+    }
+
+    .extraWidgets {
+        gap: 24px;
+    }
+
+    .bannerCard {
+        width: 160px;
+    }
+    
+    .bannerCardTitle {
+        font-size: 18px;
+    }
+    
+    .bannerCardDescription {
+        font-size: 14px;
+    }
+}

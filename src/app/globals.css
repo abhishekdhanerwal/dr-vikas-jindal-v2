@@ -1,0 +1,31 @@
+:root {
+  --soft-white: #F7F8F3;
+  --vibrant-red: #F7444E;
+  --light-teal: #78BCC4;
+  --deep-navy: #002C3E;
+  --gunpowder-gray: #484753;
+  --primary-color: #07302F;
+  --secondary-color: #BFD1A0;
+  --tertiary-color: #F2C5B9;
+  --primary-text-color: #075056;
+  --background-color: #B1D1E3;
+  --text-color: #075056;
+  --secondary-text-color: #FDF6E3;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.pageContent {
+  margin-top: 64px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  .pageContent {
+    margin-top: 48px;
+  }
+}
