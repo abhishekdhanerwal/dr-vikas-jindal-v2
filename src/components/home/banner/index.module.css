@@ -202,11 +202,18 @@
 @media (max-width: 390px) {
     .imgContainerMobile {
         height: 28dvh;
+        margin-top: 16px;
     }
 
     .extraWidgets {
         margin-top: 12%;
         gap: 10px;
+    }
+
+    .heading1,
+    .description,
+    .btnGroup {
+        margin-top: 12px;
     }
 }
 

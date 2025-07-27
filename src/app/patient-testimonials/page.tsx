@@ -2,12 +2,25 @@ import GroupIcon from '@mui/icons-material/Group';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import GoogleIcon from '@mui/icons-material/Google';
+import PlaceIcon from '@mui/icons-material/Place';
+import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
 import styles from './page.module.css';
-import { Button, Pagination } from '@mui/material';
+import { Pagination } from '@mui/material';
 import { Star } from '@mui/icons-material';
+import { useFonts } from '@/hooks/useFonts';
 
 export default function Testimonials() {
+
+  const {
+    montserrat,
+    openSans,
+    robotoBold,
+    roboto,
+    exo2,
+} = useFonts();
+
   const stats = [
     { number: "5000+", label: "Happy Patients", icon: <GroupIcon /> },
     { number: "98%", label: "Success Rate", icon: <MilitaryTechIcon /> },
@@ -83,8 +96,8 @@ export default function Testimonials() {
       <section className={styles.heroSection}>
         <div className={styles.container}>
           <div className={styles.heroContent}>
-            <h1 className={styles.title}>What Our Patients Say</h1>
-            <p className={styles.description}>
+            <h1 className={`${montserrat.className} ${styles.title}`}>What Our Patients Say</h1>
+            <p className={`${roboto.className} ${styles.description}`}>
               Real stories from real patients who have experienced exceptional care and successful treatment outcomes.
               Your health and satisfaction are our top priorities.
             </p>
@@ -93,8 +106,8 @@ export default function Testimonials() {
               {stats.map((stat, index) => (
                 <div key={index} className={styles.statItem}>
                   <div className={styles.statIcon}>{stat.icon}</div>
-                  <div className={styles.statNumber}>{stat.number}</div>
-                  <div className={styles.statLabel}>{stat.label}</div>
+                  <div className={`${robotoBold.className} ${styles.statNumber}`}>{stat.number}</div>
+                  <div className={`${roboto.className} ${styles.statLabel}`}>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -106,31 +119,31 @@ export default function Testimonials() {
       <div className={styles.container}>
         <div className={styles.header}>
           <div className={styles.headerBadge}>
-            <span className={styles.googleInitial}>G</span>
+            <span className={styles.googleInitial}><GoogleIcon /></span>
           </div>
-          <h2 className={styles.reviewTitle}>Google Business Reviews</h2>
+          <h2 className={`${montserrat.className} ${styles.reviewTitle}`}>Google Business Reviews</h2>
         </div>
-        <p className={styles.subtext}>Verified reviews from our Google Business profile</p>
+        <p className={`${roboto.className} ${styles.subtext}`}>Verified reviews from our Google Business profile</p>
 
         <div className={styles.summaryCard}>
           <div className={styles.ratingBlock}>
-            <div className={styles.ratingValue}>4.9</div>
+            <div className={`${robotoBold.className} ${styles.ratingValue}`}>4.9</div>
             <div className={styles.stars}>
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className={styles.starIcon} />
               ))}
             </div>
-            <div className={styles.summaryLabel}>Google Rating</div>
+            <div className={`${roboto.className} ${styles.summaryLabel}`}>Google Rating</div>
           </div>
           <div className={styles.divider}></div>
           <div className={styles.summaryItem}>
-            <div className={styles.summaryNumber}>500+</div>
-            <div className={styles.summaryLabel}>Total Reviews</div>
+            <div className={`${robotoBold.className} ${styles.summaryNumber}`}>500+</div>
+            <div className={`${roboto.className} ${styles.summaryLabel}`}>Total Reviews</div>
           </div>
           <div className={styles.divider}></div>
           <div className={styles.summaryItem}>
-            <div className={styles.summaryNumber}>98%</div>
-            <div className={styles.summaryLabel}>5-Star Reviews</div>
+            <div className={`${robotoBold.className} ${styles.summaryNumber}`}>98%</div>
+            <div className={`${roboto.className} ${styles.summaryLabel}`}>5-Star Reviews</div>
           </div>
         </div>
 
@@ -142,11 +155,11 @@ export default function Testimonials() {
                   <div className={styles.reviewerInfo}>
                     <div className={styles.avatar}>{review.avatar}</div>
                     <div>
-                      <div className={styles.reviewerDetails}>{review.googleProfile}</div>
+                      <div className={`${roboto.className} ${styles.reviewerDetails}`}>{review.name}</div>
                     </div>
                   </div>
-                  <div className={styles.reviewDate}>
-                    <div className={styles.googleLogoSmall}>G</div>
+                  <div className={`${openSans.className} ${styles.reviewDate}`}>
+                    <div className={styles.googleLogoSmall}><GoogleIcon /></div>
                     {review.date}
                   </div>
                 </div>
@@ -157,10 +170,9 @@ export default function Testimonials() {
                       <Star key={i} className={styles.starIconSmall} />
                     ))}
                   </div>
-                  <span className={styles.reviewDateSmall}>{review.date}</span>
                 </div>
 
-                <p className={styles.reviewText}>{`"${review.review}"`}</p>
+                <p className={`${exo2.className} ${styles.reviewText}`}>{`"${review.review}"`}</p>
               </div>
             </div>
           ))}
@@ -173,25 +185,27 @@ export default function Testimonials() {
           <div className={styles.ctaHeader}>
             <div className={styles.ctaLogo}>G</div>
             <div className={styles.ctaInfo}>
-              <h3 className={styles.ctaTitle}>Dr. Vikas Jindal - Gastroenterologist</h3>
+              <h3 className={`${montserrat.className} ${styles.ctaTitle}`}>Dr. Vikas Jindal - Gastroenterologist</h3>
               <div className={styles.ctaStars}>
-                {Array.from({ length: 5 }).map((_, i) => (
+                <div>
+                  {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className={styles.starIconSmall} />
                 ))}
-                <span className={styles.reviewCount}>4.9 • 500+ Google reviews</span>
+                </div>
+                <span className={`${roboto.className} ${styles.reviewCount}`}>4.9 • 500+ Google reviews</span>
               </div>
             </div>
           </div>
-          <p className={styles.ctaText}>
+          <p className={`${roboto.className} ${styles.ctaText}`}>
             Read more reviews and find our location, hours, and contact information on our Google Business profile.
           </p>
           <div className={styles.ctaButtons}>
-            <Button className={styles.ctaPrimary}>
-              <span className="mr-2">📍</span>View on Google Maps
-            </Button>
-            <Button variant="outlined" className={styles.ctaSecondary}>
-              <span className="mr-2">✍️</span>Write a Review
-            </Button>
+            <button className={styles.ctaPrimary}>
+              <PlaceIcon />View on Google Maps
+            </button>
+            <button className={styles.ctaSecondary}>
+              <ModeEditOutlineIcon />Write a Review
+            </button>
           </div>
         </div>
       </div>
