@@ -4,7 +4,7 @@ import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import styles from './page.module.css';
-import { Button, Card, CardContent, Pagination } from '@mui/material';
+import { Button, Pagination } from '@mui/material';
 import { Star } from '@mui/icons-material';
 
 export default function Testimonials() {
@@ -160,7 +160,7 @@ export default function Testimonials() {
                   <span className={styles.reviewDateSmall}>{review.date}</span>
                 </div>
 
-                <p className={styles.reviewText}>"{review.review}"</p>
+                <p className={styles.reviewText}>{`"${review.review}"`}</p>
               </div>
             </div>
           ))}

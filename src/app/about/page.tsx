@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Card, CardContent } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
 import css from "./page.module.css";
 import { JSX } from "react";
 
@@ -11,7 +11,6 @@ import SchoolIcon from '@mui/icons-material/School';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupIcon from '@mui/icons-material/Group';
 import { useFonts } from "@/hooks/useFonts";
-import { AboutTimeline } from "@/components/about-timeline";
 
 interface Stat {
     icon: JSX.Element;
@@ -211,7 +210,7 @@ export default function About() {
                         <h2 className={`${montserrat.className} ${css.clinicalExcellenceTitle}`}>
                             Education & <span className={css.qualificationTextGradient}>Qualifications</span>
                         </h2>
-                        <p className={`${playpenSans.className} ${css.clinicalExcellenceSubtitle}`}>Premier medical education from India's top institutions</p>
+                        <p className={`${playpenSans.className} ${css.clinicalExcellenceSubtitle}`}>{`Premier medical education from India's top institutions`}</p>
                     </div>
 
                     <div className={css.qualificationGrid}>
@@ -255,9 +254,9 @@ export default function About() {
                         {/* <FavoriteBorderIcon className={css.heartIcon} /> */}
                         <h2 className={`${playpenSans.className} ${css.heading}`}>Treatment Philosophy</h2>
                         <blockquote className={`${exo2.className} ${css.quote}`}>
-                            "Every patient deserves the highest standard of care combining cutting-edge medical technology with
+                            {`"Every patient deserves the highest standard of care combining cutting-edge medical technology with
                             compassionate human touch. My approach integrates evidence-based medicine with personalized treatment
-                            plans, ensuring optimal outcomes while maintaining the dignity and comfort of each individual."
+                            plans, ensuring optimal outcomes while maintaining the dignity and comfort of each individual."`}
                         </blockquote>
                         <div className={css.author}>
                             <div className={`${robotoBold.className} ${css.authorName}`}>Dr. Vikas Jindal</div>

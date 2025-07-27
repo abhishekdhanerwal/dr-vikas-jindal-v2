@@ -1,8 +1,3 @@
-import Link from 'next/link';
-
-import { Button, Card, CardContent } from '@mui/material';
-import { ArrowRight } from '@mui/icons-material';
-
 import { SERVICES } from '@/content/services';
 import { useFonts } from '@/hooks/useFonts';
 

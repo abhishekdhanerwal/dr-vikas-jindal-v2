@@ -221,7 +221,7 @@ export default function ServicesPage() {
                 <div className="container">
                     <h2 className={css.ctaHeader}>Ready to Schedule Your Service?</h2>
                     <p className={css.ctaText}>
-                        Don't wait to address your digestive health concerns. Our expert team is here to help you feel better.
+                        {`Don't wait to address your digestive health concerns. Our expert team is here to help you feel better.`}
                     </p>
                     <div className={css.ctaButtons}>
                         <button className={css.primaryButton}>Book Appointment</button>

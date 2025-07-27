@@ -9,7 +9,7 @@ export const Booking = () => {
     return (
         <div className={css.bookingContainer}>
             <h1 className={montserrat.className}>Ready to Take Control of Your Digestive Health?</h1>
-            <h3 className={roboto.className}>Don't let digestive issues affect your quality of life. Schedule a consultation today.</h3>
+            <h3 className={roboto.className}>{`Don't let digestive issues affect your quality of life. Schedule a consultation today.`}</h3>
             <Button startIcon={<CallIcon />} variant="contained">Book Consultation</Button>
         </div>
     )

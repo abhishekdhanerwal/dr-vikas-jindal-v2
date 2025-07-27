@@ -10,15 +10,9 @@ import Image from 'next/image';
 
 export const WhyChooseUs = () => {
     const { 
-        montserrat,
-        openSans,
         robotoBold,
         roboto,
-        exo2,
         playpenSans,
-        unlock,
-        sofadiOne,
-        zillaSlab
       } = useFonts();
 
     return (
