@@ -20,7 +20,7 @@ const services = [
             "Biopsy capability",
         ],
         conditions: ["GERD", "Ulcers", "Swallowing difficulties", "Unexplained abdominal pain"],
-        image: "/placeholder.svg",
+        image: "/images/upper-endoscopy-v2.png",
     },
     {
         title: "Colonoscopy",
@@ -35,7 +35,7 @@ const services = [
             "Detailed imaging and documentation",
         ],
         conditions: ["Colorectal cancer screening", "IBD monitoring", "Bleeding", "Changes in bowel habits"],
-        image: "/placeholder.svg",
+        image: "/images/colonoscopy-v2.2.png",
     },
     {
         title: "Liver Disease Management",
@@ -49,7 +49,7 @@ const services = [
             "Regular monitoring protocols",
         ],
         conditions: ["Hepatitis B & C", "Fatty liver disease", "Cirrhosis", "Liver cancer"],
-        image: "/placeholder.svg",
+        image: "/images/liver-disease-management-v2.png",
     },
     {
         title: "IBD Treatment",
@@ -64,7 +64,7 @@ const services = [
             "Quality of life optimization",
         ],
         conditions: ["Crohn's disease", "Ulcerative colitis", "Indeterminate colitis"],
-        image: "/placeholder.svg",
+        image: "/images/ibd-v2.1.png",
     },
     {
         title: "ERCP (Endoscopic Retrograde Cholangiopancreatography)",
@@ -78,7 +78,7 @@ const services = [
             "Specialized expertise required",
         ],
         conditions: ["Bile duct stones", "Pancreatic disorders", "Jaundice", "Biliary strictures"],
-        image: "/placeholder.svg",
+        image: "/images/ERCP-v2.png",
     },
     {
         title: "Acid Reflux Treatment",
@@ -93,7 +93,7 @@ const services = [
             "Surgical referral when needed",
         ],
         conditions: ["GERD", "Heartburn", "Barrett's esophagus", "Hiatal hernia"],
-        image: "/placeholder.svg",
+        image: "/images/acid-reflux-v2.1.png",
     },
 ];
 
@@ -125,7 +125,7 @@ export default function ServicesPage() {
                                 objectFit="cover"
                                 className={css.serviceImage}
                             />
-                            <div className={css.categoryBadge}>{service.category}</div>
+                            {/* <div className={css.categoryBadge}>{service.category}</div> */}
                         </div>
                         <div className={css.serviceContent}>
                             <div className={css.serviceHeader}>
