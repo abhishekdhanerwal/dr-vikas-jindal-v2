@@ -18,6 +18,8 @@ import { NAVIGATION } from '@/content/navigation';
 import { Button } from '@mui/material';
 import CallIcon from '@mui/icons-material/Call';
 import { useFonts } from '@/hooks/useFonts';
+import { useConsultationDialog } from '@/hooks/useConsultationDialog';
+import ConsultationDialog from '../consultation-dialog';
 
 interface Props {
   open: boolean;
@@ -34,6 +36,8 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
     playpenSans,
   } = useFonts();
 
+  const { openConsultationDialog, handleCloseConsultationDialog, handleOpenConsultationDialog } = useConsultationDialog();
+  
   const goToPage = (path: string) => {
     router.push(path)
   }
@@ -41,6 +45,7 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
   const selectedPath = query.get('type') ? `/${pathname.split('/')[1]}` : pathname ?? "";
 
   return (
+    <>
     <Drawer open={open} onClose={onClose} anchor='right' classes={{paper: css.drawer}}>
       <Box sx={{width: 275, mt: 2, position: 'relative', height: 'calc(100vh - 16px)', paddingX: '10px' }} role="presentation" onClick={onClose}>
         <div className={css.logoTitle}>
@@ -65,7 +70,7 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
           </ListItemButton>
           </Fragment>))}
         </List>
-        <Button className={css.bookingBtn} fullWidth startIcon={<CallIcon />} variant="contained">Book Consultation</Button>
+        <Button onClick={handleOpenConsultationDialog} className={css.bookingBtn} fullWidth startIcon={<CallIcon />} variant="contained">Book Consultation</Button>
         <Divider className={css.divider} />
         <div className={css.socialMediaContainer}>
           <FacebookIcon style={{ color: '#316FF6' }} />
@@ -74,6 +79,11 @@ const NavigationDrawer = ({ open, onClose }: Props) => {
         </div>
       </Box>
     </Drawer>
+    <ConsultationDialog
+          isOpen={openConsultationDialog}
+          handleClose={handleCloseConsultationDialog}
+      />
+    </>
   );
 };
 

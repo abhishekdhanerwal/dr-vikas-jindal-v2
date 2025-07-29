@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent } from "@mui/material";
 import css from "./page.module.css";
@@ -11,6 +13,8 @@ import SchoolIcon from '@mui/icons-material/School';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import GroupIcon from '@mui/icons-material/Group';
 import { useFonts } from "@/hooks/useFonts";
+import { useConsultationDialog } from "@/hooks/useConsultationDialog";
+import ConsultationDialog from "@/components/consultation-dialog";
 
 interface Stat {
     icon: JSX.Element;
@@ -30,6 +34,7 @@ export default function About() {
         exo2,
         playpenSans,
     } = useFonts();
+    const { openConsultationDialog, handleCloseConsultationDialog, handleOpenConsultationDialog } = useConsultationDialog();
 
     const stats: Stat[] = [
         {
@@ -159,8 +164,8 @@ export default function About() {
                                 digestive health care in Delhi, combining advanced medical expertise with compassionate patient care.
                             </p>
                             <div className={css.buttonGroup}>
-                                <button className={css.primaryButton}>Schedule Consultation</button>
-                                <button className={css.outlineButton}>Download CV</button>
+                                <button onClick={handleOpenConsultationDialog} className={css.primaryButton}>Schedule Consultation</button>
+                                {/* <button className={css.outlineButton}>Download CV</button> */}
                             </div>
                         </div>
 
@@ -289,6 +294,10 @@ export default function About() {
                         ))}
                     </div>
                 </div>
+                <ConsultationDialog
+                    isOpen={openConsultationDialog}
+                    handleClose={handleCloseConsultationDialog}
+                />
             </section>
         </>
     )

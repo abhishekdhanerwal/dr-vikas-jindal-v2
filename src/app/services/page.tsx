@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 
 import LooksOneIcon from '@mui/icons-material/LooksOne';
@@ -5,6 +7,9 @@ import LooksTwoIcon from '@mui/icons-material/LooksTwo';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 import css from "./page.module.css";
+import { useConsultationDialog } from '@/hooks/useConsultationDialog';
+import ConsultationDialog from '@/components/consultation-dialog';
+import { useLocation } from '@/hooks/useLocation';
 
 const services = [
     {
@@ -98,6 +103,9 @@ const services = [
 ];
 
 export default function ServicesPage() {
+        const { openConsultationDialog, handleCloseConsultationDialog, handleOpenConsultationDialog } = useConsultationDialog();
+        const { openMap } = useLocation();
+
     return (
         <div className={css.pageWrapper}>
             <section className={css.heroSection}>
@@ -108,8 +116,8 @@ export default function ServicesPage() {
                         offers the latest in gastroenterology care with a patient-first approach.
                     </p>
                     <div className={css.heroButtons}>
-                        <button className={css.primaryButton}>Schedule Consultation</button>
-                        <button className={css.outlineButton}>Download Service Guide</button>
+                        <button onClick={handleOpenConsultationDialog} className={css.primaryButton}>Schedule Consultation</button>
+                        <button onClick={openMap} className={css.outlineButton}>Get Directions</button>
                     </div>
                 </div>
             </section>
@@ -235,7 +243,10 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </section>
-
+            <ConsultationDialog
+                    isOpen={openConsultationDialog}
+                    handleClose={handleCloseConsultationDialog}
+                />
         </div>
     );
 }

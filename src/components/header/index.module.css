@@ -22,6 +22,7 @@
   .logoTitle {
     display: flex;
     gap: 12px;
+    cursor: pointer;
   }
   
   .title {
@@ -76,7 +77,7 @@
     }
   
     .headerContent {
-      margin-top: 15px;
+      margin-top: 8px;
     }
   
     .listContainer {
@@ -87,6 +88,10 @@
   
     .iconGroupHead {
       gap: 4px;
+    }
+
+    .title {
+      font-size: 18px;
     }
   }
   

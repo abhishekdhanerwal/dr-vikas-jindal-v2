@@ -1,0 +1,145 @@
+.dialog {
+  background-color: var(--soft-white) !important;
+}
+
+.headerTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #003c57;
+  }
+  
+  .subTitle {
+    font-size: 1.1rem;
+    margin: 8px 0 20px;
+    color: #555;
+  }
+  
+  .dialogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .card {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .cardHeader {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .cardTitle {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #111;
+  }
+  
+  .cardDesc {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .iconCircle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .greenIcon {
+    background-color: #25d3661a;
+  }
+  
+  .orangeIcon {
+    background-color: #ff98001a;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: #222;
+  }
+  
+  .cardPoints {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .pointIconGreen {
+    color: #25d366;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  
+  .pointIconOrange {
+    color: #ff9800;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  
+  .whatsappButton {
+    background-color: #25d366 !important;
+    color: white !important;
+    text-transform: none !important;
+  }
+  
+  .callButton {
+    background-color: #ff9800 !important;
+    color: white !important;
+    text-transform: none !important;
+  }
+  
+  .buttonIcon {
+    margin-right: 8px;
+  }
+  
+  .contactNote {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 8px;
+  }
+  
+  .emergencyBox {
+    margin-top: 24px;
+    padding: 16px;
+    background-color: #ffeaea;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .emergencyTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #d32f2f;
+  }
+  
+  .emergencyText {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 8px 0;
+  }
+  
+  .emergencyButton {
+    margin-top: 12px;
+    text-transform: none !important;
+  }
+  

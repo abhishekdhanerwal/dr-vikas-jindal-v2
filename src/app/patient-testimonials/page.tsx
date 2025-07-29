@@ -1,3 +1,5 @@
+"use client";
+
 import GroupIcon from '@mui/icons-material/Group';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import StarIcon from '@mui/icons-material/Star';
@@ -10,6 +12,7 @@ import styles from './page.module.css';
 import { Pagination } from '@mui/material';
 import { Star } from '@mui/icons-material';
 import { useFonts } from '@/hooks/useFonts';
+import { useLocation } from '@/hooks/useLocation';
 
 export default function Testimonials() {
 
@@ -20,6 +23,12 @@ export default function Testimonials() {
     roboto,
     exo2,
 } = useFonts();
+
+const { openMap } = useLocation();
+
+const openReviewPage = () => {
+  window.open("https://g.page/r/CXncIPg0tpa9EAE/review", "_blank");
+};
 
   const stats = [
     { number: "5000+", label: "Happy Patients", icon: <GroupIcon /> },
@@ -200,10 +209,10 @@ export default function Testimonials() {
             Read more reviews and find our location, hours, and contact information on our Google Business profile.
           </p>
           <div className={styles.ctaButtons}>
-            <button className={styles.ctaPrimary}>
+            <button onClick={openMap} className={styles.ctaPrimary}>
               <PlaceIcon />View on Google Maps
             </button>
-            <button className={styles.ctaSecondary}>
+            <button onClick={openReviewPage} className={styles.ctaSecondary}>
               <ModeEditOutlineIcon />Write a Review
             </button>
           </div>

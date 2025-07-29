@@ -39,7 +39,7 @@ export const QuickReview = () => {
                 </div>
 
                 <div className={css.testimonialButton}>
-                    <a href="/testimonials">
+                    <a href="/patient-testimonials">
                         <button>Read More Success Stories</button>
                     </a>
                 </div>
