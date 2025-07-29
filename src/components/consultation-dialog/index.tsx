@@ -10,6 +10,8 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import PeopleIcon from '@mui/icons-material/People';
 import styles from "./index.module.css";
 import { useFonts } from "@/hooks/useFonts";
+import { IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 interface Props {
   isOpen: boolean;
@@ -26,6 +28,18 @@ const ConsultationDialog: React.FC<Props> = ({
   return (
     <Dialog classes={{ paper:  styles.dialog }} open={isOpen} maxWidth="sm" fullWidth>
       <DialogTitle className={styles.headerTitle}>Book Your Consultation</DialogTitle>
+      <IconButton
+          aria-label="close"
+          onClick={handleClose}
+          sx={(theme) => ({
+            position: 'absolute',
+            right: 8,
+            top: 8,
+            color: theme.palette.grey[500],
+          })}
+        >
+          <CloseIcon />
+        </IconButton>
       <DialogContent className={styles.dialogContent}>
         {/* WhatsApp Option */}
         <div className={styles.card + " " + styles.whatsappCard}>

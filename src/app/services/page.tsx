@@ -232,7 +232,7 @@ export default function ServicesPage() {
                         {`Don't wait to address your digestive health concerns. Our expert team is here to help you feel better.`}
                     </p>
                     <div className={css.ctaButtons}>
-                        <button className={css.primaryButton}>Book Appointment</button>
+                        <button onClick={handleOpenConsultationDialog} className={css.primaryButton}>Book Appointment</button>
                         <button className={css.outlineButton}>Call: +91-98765-43210</button>
                         {/* <button className="btnPrimary">
                             Book Appointment
